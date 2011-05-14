@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<site>
-   <feature url="features/com.github.turmeric.eclipse.extras.feature_1.0.0.201105031404.jar" id="com.github.turmeric.eclipse.extras.feature" version="1.0.0.201105031404">
-      <category name="turmeric_eclipse_extras"/>
-   </feature>
-   <category-def name="turmeric_eclipse_extras" label="Turmeric Eclipse Extras"/>
-</site>
