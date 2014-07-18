@@ -1,0 +1,52 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<name>Plexapp Android Client</name>
+	<groupId>us.nineworlds.android</groupId>
+	<version>20.0.0</version>
+
+	<artifactId>appcompat-v7</artifactId>
+	<packaging>apklib</packaging>
+
+	<properties>
+		<android-version>4.2.2_r2</android-version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>android.support</groupId>
+			<artifactId>compatibility-v4</artifactId>
+			<version>19.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>android</groupId>
+			<artifactId>android</artifactId>
+			<version>4.3_r2</version>
+			<scope>provided</scope>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+	    <sourceDirectory>src</sourceDirectory>
+		<plugins>
+			<plugin>
+				<groupId>com.jayway.maven.plugins.android.generation2</groupId>
+				<artifactId>android-maven-plugin</artifactId>
+				<extensions>true</extensions>
+				<configuration>
+				    <sdk>
+				       <platform>18</platform>
+				    </sdk>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
