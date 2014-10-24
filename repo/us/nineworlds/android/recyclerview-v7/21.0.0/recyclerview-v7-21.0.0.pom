@@ -1,14 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
    <modelVersion>4.0.0</modelVersion>
-   <name>Android support v4</name>
+   <name>Android RecyclerView v7</name>
    <parent>
       <groupId>us.nineworlds.android</groupId>
       <artifactId>adt-android-support</artifactId>
       <version>21.0.0</version>
    </parent>
-
-   <artifactId>support-v4</artifactId>
+   <artifactId>recyclerview-v7</artifactId>
    <packaging>apklib</packaging>
 
    <properties>
@@ -19,15 +18,14 @@
       <dependency>
          <groupId>android</groupId>
          <artifactId>android</artifactId>
-         <version>5.0_r1</version>
+         <version>4.3_r2</version>
          <scope>provided</scope>
       </dependency>
       <dependency>
          <groupId>us.nineworlds.android</groupId>
-         <artifactId>support-annotations</artifactId>
+         <artifactId>support-v4</artifactId>
          <version>${project.version}</version>
       </dependency>
-
    </dependencies>
 
    <build>
@@ -36,17 +34,9 @@
             <groupId>com.jayway.maven.plugins.android.generation2</groupId>
             <artifactId>android-maven-plugin</artifactId>
             <extensions>true</extensions>
-            <executions>
-               <execution>
-                  <goals>
-                     <goal>generate-sources</goal>
-                  </goals>
-                  <phase>generate-sources</phase>
-               </execution>
-            </executions>
             <configuration>
                <sdk>
-                  <platform>21</platform>
+                  <platform>L</platform>
                </sdk>
             </configuration>
          </plugin>
@@ -56,27 +46,6 @@
                <source>1.6</source>
                <target>1.6</target>
             </configuration>
-         </plugin>
-         <plugin>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>build-helper-maven-plugin</artifactId>
-            <version>1.8</version>
-            <executions>
-               <execution>
-                  <phase>package</phase>
-                  <goals>
-                     <goal>attach-artifact</goal>
-                  </goals>
-                  <configuration>
-                     <artifacts>
-                        <artifact>
-                           <type>jar</type>
-                           <file>${build.directory}/${build.finalName}.jar</file>
-                        </artifact>
-                     </artifacts>
-                  </configuration>
-               </execution>
-            </executions>
          </plugin>
       </plugins>
    </build>

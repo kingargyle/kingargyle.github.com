@@ -1,14 +1,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
    <modelVersion>4.0.0</modelVersion>
-   <name>Android support v4</name>
-   <parent>
+   <name>Android Leaback V17</name>
+   <parent> 
       <groupId>us.nineworlds.android</groupId>
       <artifactId>adt-android-support</artifactId>
       <version>21.0.0</version>
    </parent>
 
-   <artifactId>support-v4</artifactId>
+   <artifactId>leanback-v17</artifactId>
    <packaging>apklib</packaging>
 
    <properties>
@@ -24,8 +24,9 @@
       </dependency>
       <dependency>
          <groupId>us.nineworlds.android</groupId>
-         <artifactId>support-annotations</artifactId>
-         <version>${project.version}</version>
+         <artifactId>recyclerview-v7</artifactId>
+         <version>21.0.0</version>
+         <type>apklib</type>
       </dependency>
 
    </dependencies>
@@ -36,14 +37,6 @@
             <groupId>com.jayway.maven.plugins.android.generation2</groupId>
             <artifactId>android-maven-plugin</artifactId>
             <extensions>true</extensions>
-            <executions>
-               <execution>
-                  <goals>
-                     <goal>generate-sources</goal>
-                  </goals>
-                  <phase>generate-sources</phase>
-               </execution>
-            </executions>
             <configuration>
                <sdk>
                   <platform>21</platform>
@@ -56,27 +49,6 @@
                <source>1.6</source>
                <target>1.6</target>
             </configuration>
-         </plugin>
-         <plugin>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>build-helper-maven-plugin</artifactId>
-            <version>1.8</version>
-            <executions>
-               <execution>
-                  <phase>package</phase>
-                  <goals>
-                     <goal>attach-artifact</goal>
-                  </goals>
-                  <configuration>
-                     <artifacts>
-                        <artifact>
-                           <type>jar</type>
-                           <file>${build.directory}/${build.finalName}.jar</file>
-                        </artifact>
-                     </artifacts>
-                  </configuration>
-               </execution>
-            </executions>
          </plugin>
       </plugins>
    </build>
