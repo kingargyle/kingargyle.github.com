@@ -1,0 +1,5 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Fri Jul 11 18:48:31 EDT 2014
+android-4.3_r2.jar>=
+android-4.3_r2.pom>=
+android-4.3_r2-sources.jar>=
